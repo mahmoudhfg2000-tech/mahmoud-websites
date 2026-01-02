@@ -3,112 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محمود كود | القمة</title>
+    <title>محمود كود | حلول رقمية للمستقبل</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <style>
-        /* إعدادات الخط والألوان */
-        body { 
-            font-family: 'Tajawal', sans-serif; 
-            background-color: #000; 
-            color: white; 
-            overflow-x: hidden; 
-        }
+        body { font-family: 'Tajawal', sans-serif; background-color: #030712; color: white; overflow-x: hidden; }
         
-        /* الخلفية المتحركة (Blobs) */
-        .blob { 
-            position: absolute; 
-            filter: blur(80px); 
-            opacity: 0.4; 
-            z-index: -1; 
-            animation: float 10s infinite alternate; 
-        }
-        .blob-1 { top: -10%; right: -10%; width: 500px; height: 500px; background: #3b82f6; border-radius: 40% 60% 70% 30%; }
-        .blob-2 { bottom: -10%; left: -10%; width: 500px; height: 500px; background: #8b5cf6; border-radius: 60% 40% 30% 70%; animation-delay: -5s; }
-        
-        @keyframes float { 
-            0% { transform: translate(0, 0) rotate(0deg); } 
-            100% { transform: translate(20px, 40px) rotate(10deg); } 
+        /* تدرج لوني للنصوص */
+        .text-gradient {
+            background: linear-gradient(to right, #60a5fa, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        /* تأثير الزجاج */
-        .glass-panel { 
-            background: rgba(255, 255, 255, 0.03); 
-            backdrop-filter: blur(16px); 
-            border: 1px solid rgba(255, 255, 255, 0.08); 
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+        /* خلفية ضبابية متحركة */
+        .blob {
+            position: absolute;
+            filter: blur(90px);
+            z-index: -1;
+            opacity: 0.4;
+            animation: move 10s infinite alternate;
         }
-        
-        /* تلوين النصوص */
-        .text-gradient { background: linear-gradient(135deg, #fff 0%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .text-glow { text-shadow: 0 0 40px rgba(59, 130, 246, 0.5); }
+        @keyframes move {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(20px, -20px) scale(1.1); }
+        }
     </style>
 </head>
-<body class="selection:bg-blue-500/30">
+<body class="antialiased selection:bg-purple-500 selection:text-white">
 
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
+    <div class="blob bg-blue-600 w-96 h-96 rounded-full top-0 right-0"></div>
+    <div class="blob bg-purple-600 w-96 h-96 rounded-full bottom-0 left-0"></div>
 
-    <div class="max-w-7xl mx-auto px-6 py-10 relative z-10">
-        
-        <nav class="flex justify-between items-center mb-24" data-aos="fade-down">
-            <div class="text-2xl font-black tracking-tighter">MAHMOUD<span class="text-blue-500">.DESIGN</span></div>
-            <a href="https://wa.me/201555933301" class="hidden md:block bg-white/10 hover:bg-white/20 border border-white/10 px-8 py-3 rounded-full font-bold transition-all backdrop-blur-md">
-                تواصل معنا
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-white/10 bg-black/50 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="self-center text-2xl font-black whitespace-nowrap text-white">MAHMOUD<span class="text-blue-500">.CODE</span></span>
             </a>
-        </nav>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="https://wa.me/201555933301" class="text-white bg-blue-600 hover:bg-blue-700 font-bold rounded-lg text-sm px-5 py-2.5 text-center transition-all shadow-[0_0_20px_rgba(37,99,235,0.5)]">
+                    ابدأ مشروعك الآن 🚀
+                </a>
+            </div>
+        </div>
+    </nav>
 
-        <div class="text-center space-y-8 mb-32">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-bold mb-6" data-aos="zoom-in">
-                <span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span></span>
-                متاح للمشاريع الجديدة
+    <section class="min-h-screen flex items-center justify-center pt-20 relative">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+            <div data-aos="fade-down" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-300 bg-gray-800 rounded-full hover:bg-gray-700" role="alert">
+                <span class="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 ml-3">جديد</span> <span class="text-sm font-medium">عرض خاص لتصميم المواقع الشخصية</span> 
+                <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
             </div>
             
-            <h1 class="text-5xl md:text-8xl font-black leading-normal md:leading-[1.5] tracking-tight" data-aos="fade-up">
-                <span class="text-gradient block pb-2">التميز الرقمي</span>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-glow block pt-2">يبدأ من هنا.</span>
+            <h1 data-aos="zoom-in" class="mb-4 text-4xl font-black tracking-tight leading-none text-white md:text-6xl lg:text-8xl">
+                نحول أفكارك إلى <br> <span class="text-gradient">واقع رقمي مبهر.</span>
             </h1>
             
-            <p class="text-gray-400 text-xl md:text-2xl max-w-3xl mx-auto font-light leading-loose mt-6" data-aos="fade-up" data-delay="100">
-                نحول الأفكار المعقدة إلى تجارب ويب <span class="text-white font-bold">استثنائية</span> تحقق مبيعات حقيقية.
+            <p data-aos="fade-up" class="mb-8 text-lg font-normal text-gray-400 lg:text-xl sm:px-16 xl:px-48 leading-relaxed">
+                نقدم خدمات تصميم وتطوير مواقع احترافية تساعد نشاطك التجاري على النمو. سرعة، أمان، وتصميم يخطف الأنظار.
             </p>
-
-            <div class="flex flex-col md:flex-row justify-center gap-6 mt-12" data-aos="fade-up" data-delay="200">
-                <a href="tel:01555933301" class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-[0_0_40px_rgba(37,99,235,0.3)] transition-all hover:-translate-y-1">
-                    اتصل الآن
+            
+            <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 rtl:space-x-reverse gap-4">
+                <a href="https://wa.me/201555933301" class="inline-flex justify-center items-center py-4 px-8 text-base font-bold text-center text-white rounded-xl bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-900 transition-transform hover:-translate-y-1">
+                    تواصل معنا واتساب
+                    <svg class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </a>
-                <a href="https://wa.me/01555933301" class="glass-panel px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all">
-                    واتساب
+                <a href="#features" class="inline-flex justify-center items-center py-4 px-8 text-base font-medium text-center text-gray-300 border border-gray-700 rounded-xl hover:bg-gray-800 focus:ring-4 focus:ring-gray-800 transition-all">
+                    اكتشف خدماتنا
                 </a>
             </div>
         </div>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-32">
-            <div class="md:col-span-8 glass-panel rounded-[2.5rem] p-8 md:p-14 relative overflow-hidden" data-aos="fade-up">
-                <h3 class="text-3xl font-bold mb-4 relative z-10">سرعة لا تُنافس ⚡</h3>
-                <p class="text-gray-400 text-lg relative z-10">تصميمات خفيفة وسريعة جداً تضمن بقاء العميل في موقعك.</p>
+    <section id="features" class="bg-gray-900/50 py-24">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+            <div class="max-w-screen-md mb-8 lg:mb-16 text-center mx-auto">
+                <h2 class="mb-4 text-4xl tracking-tight font-black text-white">لماذا تختارنا؟</h2>
+                <p class="text-gray-400 sm:text-xl">نحن لا نقوم بكتابة الكود فقط، نحن نبني تجربة مستخدم متكاملة تضمن نجاح مشروعك.</p>
             </div>
+            
+            <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+                <div data-aos="fade-up" class="p-8 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-blue-500 transition-colors duration-300">
+                    <div class="flex justify-center items-center mb-4 w-14 h-14 rounded-full bg-blue-900/50 lg:h-16 lg:w-16">
+                        <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold text-white">سرعة صاروخية</h3>
+                    <p class="text-gray-400">مواقعنا مصممة لتكون فائقة السرعة، مما يحسن تجربة المستخدم وترتيبك في جوجل.</p>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="100" class="p-8 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-purple-500 transition-colors duration-300">
+                    <div class="flex justify-center items-center mb-4 w-14 h-14 rounded-full bg-purple-900/50 lg:h-16 lg:w-16">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold text-white">تصميم عصري (UI/UX)</h3>
+                    <p class="text-gray-400">نستخدم أحدث صيحات التصميم (Dark Mode, Glassmorphism) لجعل موقعك يبدو كتحفة فنية.</p>
+                </div>
 
-            <div class="md:col-span-4 glass-panel rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center items-center text-center group hover:border-purple-500/50 transition-colors" data-aos="fade-up" data-delay="100">
-                <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🎨</div>
-                <h3 class="text-2xl font-bold">تصميم مودرن</h3>
+                <div data-aos="fade-up" data-aos-delay="200" class="p-8 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-pink-500 transition-colors duration-300">
+                    <div class="flex justify-center items-center mb-4 w-14 h-14 rounded-full bg-pink-900/50 lg:h-16 lg:w-16">
+                        <svg class="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold text-white">متجاوب 100%</h3>
+                    <p class="text-gray-400">موقعك سيعمل بكفاءة تامة على جميع الأجهزة: الهواتف، التابلت، واللابتوب.</p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <footer class="border-t border-white/10 pt-12 pb-6 text-center">
-            <p class="text-gray-500 text-sm">© 2026 Mahmoud Code. All Rights Reserved.</p>
-        </footer>
-
-    </div>
+    <footer class="p-4 bg-black border-t border-gray-800 md:p-8 lg:p-10">
+        <div class="mx-auto max-w-screen-xl text-center">
+            <span class="text-2xl font-black text-white">MAHMOUD<span class="text-blue-500">.CODE</span></span>
+            <p class="my-6 text-gray-500">مبرمج ومصمم واجهات ويب، شغوف بتحويل الأفكار إلى واقع.</p>
+            <span class="text-sm text-gray-500 sm:text-center">© 2026 <a href="#" class="hover:underline text-white">Mahmoud Code™</a>. جميع الحقوق محفوظة.</span>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
     </script>
 </body>
 </html>
